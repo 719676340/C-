@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+bool sanjiao(int A[][6],int n){
+	for(int i=1;i<n;i++)
+	{
+		for(int j=n-1;j>=n-i;j--)
+		{
+			if(A[i][j]!=0){
+				return false;
+			}
+		}
+	}
+	return true;
+} 
+
+int main(){
+	int A[6][6];
+	int n;
+	scanf("%d",&n);
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			scanf("%d",&A[i][j]);
+		}
+	}
+	if(sanjiao(A,n)){
+		printf("YES");
+	}else{
+		printf("NO");
+	}
+	return 0;
+}
