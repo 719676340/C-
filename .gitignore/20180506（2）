@@ -1,0 +1,20 @@
+#include<stdio.h>
+int fib(int n){
+	int temp,a=1,b=1,count=2;
+	while(count<n){
+		temp=b;
+		b=a+b;
+		a=temp;
+		count++;	
+	}
+	return b;
+}
+
+int main(){
+	int n,m;
+	scanf("%d%d",&n,&m);
+	for(int i=n;i<=m;i++){
+		printf("%d",fib(i));
+	}
+	return 0;
+}
