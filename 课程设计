@@ -1,0 +1,46 @@
+package KS;
+
+public class MatGraph {
+	int edges[][];
+	int n,e;
+	public MatGraph(int A[][],int a,int b) {
+		this.edges=A;
+		this.n=a;
+		this.e=b;
+	}
+	public MatGraph() {
+		this.edges=null;
+		this.n=0;
+		this.e=0;
+	}
+	
+	public MatGraph(int a,int b) {
+		this.n=a;
+		this.e=b;
+	}
+
+	public int[][] getEdges() {
+		return edges;
+	}
+
+	public void setEdges(int[][] edges) {
+		this.edges = edges;
+	}
+
+	public int getN() {
+		return n;
+	}
+
+	public void setN(int n) {
+		this.n = n;
+	}
+
+	public int getE() {
+		return e;
+	}
+
+	public void setE(int e) {
+		this.e = e;
+	}
+	
+}
