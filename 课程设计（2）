@@ -1,0 +1,66 @@
+package KS;
+
+import java.util.Scanner;
+
+public class create {
+	int A[][];
+	String name[];
+	int n;
+	int i,j;
+	int INF=99999999;
+	String judge;
+	public  create() {
+		System.out.printf("123");
+		Scanner in=new Scanner(System.in);
+		n=in.nextInt();
+		for(i=0;i<n;i++){
+			for(j=0;j<n;j++){
+				A[i][j]=0;
+			}
+		}
+		for(i=1;i<=n;i++) {
+			System.out.printf("请输入城市名称（"+i+")");
+			name[i]=in.nextLine();
+		}
+		for(i=0;i<n-1;i++) {
+			for(j=i+1;j<n;j++) {
+				System.out.printf(name[i]+"到"+name[j]+"是否有路线（Y or N）");
+				judge=in.nextLine();
+				if(judge=="Y") {
+					System.out.printf("输入"+name[i]+"到"+name[j]+"的权值");
+					A[i][j]=in.nextInt();
+				}else {
+					A[i][j]=INF;
+				}	
+			}
+		}
+		for(i=0;i<n-1;i++){
+			for(j=i+1;j<n;j++){
+				A[j][i]=A[i][j];
+			}
+		}
+		in.close();
+		
+		
+	}
+	public int[][] getA() {
+		return A;
+	}
+	public void setA(int[][] a) {
+		A = a;
+	}
+	public String[] getName() {
+		return name;
+	}
+	public void setName(String[] name) {
+		this.name = name;
+	}
+	public int getN() {
+		return n;
+	}
+	public void setN(int n) {
+		this.n = n;
+	}
+
+	
+}
