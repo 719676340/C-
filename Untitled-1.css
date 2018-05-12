@@ -1,0 +1,25 @@
+#box{
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+    height: 800px;
+    float: left;
+    background-color: cyan;
+
+}
+/*
+h1  {
+    float: left;
+    background-color: cyan;
+    height:1000px;
+    clear: both;
+    
+
+}
+*/
+#inbox{
+    margin: 50px;
+    /* padding: 50px; */
+    height: 900px;
+
+}
